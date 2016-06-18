@@ -247,6 +247,18 @@
 		for(var i = 0; i < bullet_max; i++){
 			if(enemy_bullet[i].exist){
 				v = true;
+				if(i%3==0){
+					if(p.x-enemy_bullet[i].x<0){
+						if(enemy_bullet[i].vx>-3)enemy_bullet[i].vx-=0.1;
+					}else{
+						if(enemy_bullet[i].vx<3)enemy_bullet[i].vx+=0.1;
+					}
+					if(p.y-enemy_bullet[i].y<0){
+						if(enemy_bullet[i].vy>-3)enemy_bullet[i].vy-=0.1;
+					}else{
+						if(enemy_bullet[i].vy<3)enemy_bullet[i].vy+=0.1;
+					}
+				}
 				enemy_bullet[i].x += enemy_bullet[i].vx;
 				enemy_bullet[i].y += enemy_bullet[i].vy;
 				if(enemy_bullet[i].y>550 || enemy_bullet[i].x<50 || enemy_bullet[i].x>350)
