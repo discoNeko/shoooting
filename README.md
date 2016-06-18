@@ -1,0 +1,2 @@
+# shoooting
+game / シューティング
